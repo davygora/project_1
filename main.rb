@@ -21,6 +21,15 @@ class Rectangle < Figure
 	end
 end
 
+class Square < Figure
+	attr_accessor :side
+
+	def square
+		s = side * side
+	end
+
+end
+
 puts circle = Circle.new
 puts circle.color = 'green circle'
 puts circle.radius = 50
@@ -31,6 +40,11 @@ puts rectangle.color = "red rectangle"
 puts rectangle.width = 10
 puts rectangle.height = 20
 puts "rectangle square =  #{rectangle.square}"
+
+square = Square.new
+puts square.color = "no color"
+square.side = 5
+puts square.square
 
 
 
