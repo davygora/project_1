@@ -1,34 +1,39 @@
 class Figure
 
-	attr_accessor :color
+  attr_accessor :color
+
 end
 
 class Circle < Figure
-	attr_accessor :radius
 
-	def square 
-		s = Math::PI * radius * radius 
-	end
+  attr_accessor :radius
 
+  def square
+    s = Math::PI * radius**2
+  end
 end
 
 class Rectangle < Figure
-	attr_accessor :width
-	attr_accessor :height
 
-	def square 
-		s = width*height
-	end
+  attr_accessor :width
+  attr_accessor :height
+
+  def square
+    s = width * height
+  end
 end
 
 class Square < Figure
-	attr_accessor :side
 
-	def square
-		s = side * side
-	end
+  attr_accessor :side
+
+  def square
+    s = side**2
+  end
 
 end
+
+=begin
 
 puts circle = Circle.new
 puts circle.color = 'green circle'
@@ -46,5 +51,4 @@ puts square.color = "no color"
 square.side = 5
 puts square.square
 
-
-
+=end
